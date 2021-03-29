@@ -3,6 +3,8 @@ $clr-prim: #9356dc;
 $clr-sec: #ff79da;
 $clr-ter: #99e2d0;
 $search: rgb(229,229,229);
+$clr-btn: linear-gradient(0deg,$clr-prim,$clr-sec);
+$clr-btn-bis: linear-gradient(0deg,$clr-ter,$clr-prim);
 
 // breakpoints
 $tiny: 480px;
