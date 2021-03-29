@@ -1,15 +1,21 @@
+// Mise en page du corps du site
 body {
 	max-width: $tiny;
 	margin: auto;
 	padding: auto;
+	font-family: 'Roboto-Regular';
 }
+
+// Logo du site
 .logo {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
+
+// Localisation
 .contain-search{
-	background: linear-gradient(#999,1px,$search);
+	background: $search;
 	width: 100%;
 	.search {
 		display: flex;
@@ -17,12 +23,45 @@ body {
 		align-items: center;
 	}
 	.position{
-		font-family: 'Roboto-Regular';
 		font-size: $localisation;
 		margin-right: 30px;
 	}
 	i {
 		font-size: $localisation+2px;
 		margin-right: 30px;
+	}
+}
+
+//Description
+.description {
+	background: rgb(244,244,244);
+	position: absolute;
+	h1 {
+		width: 75%;
+		margin: 0 auto;
+		text-align: center;
+		font-weight: bold;
+		font-size: 25px;
+		padding-top: 40px;
+	}
+	h2 {
+		text-align: center;
+		font-size: 18px;
+		font-weight: 100;
+		font-family: 'Roboto-Light';
+	}
+	button{
+		background: $clr-sec;
+		border: unset;
+		display: block;
+		margin: auto;
+		color: #fff;
+		font-size: 16px;
+		align-content: center;
+		padding: 17px 20px 17px 20px;
+		cursor: pointer;
+		border-radius: 40px;
+		margin-top: 30px;
+		margin-bottom: 60px;
 	}
 }
