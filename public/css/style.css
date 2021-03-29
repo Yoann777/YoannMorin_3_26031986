@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Shrikhand-Regular';
+  src: url("../../Shrikhand/Shrikhand-Regular.ttf"); }
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../../Roboto/Roboto-Regular.ttf"); }
+body {
+  max-width: 480px;
+  margin: auto;
+  padding: auto; }
+
+.logo {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px; }
+
+.contain-search {
+  background: linear-gradient(#999, 1px, #e5e5e5);
+  width: 100%; }
+  .contain-search .search {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .contain-search .position {
+    font-family: 'Roboto-Regular';
+    font-size: 18px;
+    margin-right: 30px; }
+  .contain-search i {
+    font-size: 20px;
+    margin-right: 30px; }
+
+/*# sourceMappingURL=style.css.map */
