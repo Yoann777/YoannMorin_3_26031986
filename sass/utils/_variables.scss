@@ -20,6 +20,13 @@ $extra-large: 1200px;
 	font-family: 'Roboto-Regular';
 	src: url('../../Roboto/Roboto-Regular.ttf');
 }
-
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('../../Roboto/Roboto-Light.ttf');
+}
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../../Roboto/Roboto-bold.ttf');
+}
 // font-size
 $localisation: 18px;
