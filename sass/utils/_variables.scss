@@ -1,0 +1,25 @@
+// couleurs du site
+$clr-prim: #9356dc;
+$clr-sec: #ff79da;
+$clr-ter: #99e2d0;
+$search: rgb(229,229,229);
+
+// breakpoints
+$tiny: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
+// font-family
+@font-face {
+	font-family: 'Shrikhand-Regular';
+	src: url('../../Shrikhand/Shrikhand-Regular.ttf');
+}
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../../Roboto/Roboto-Regular.ttf');
+}
+
+// font-size
+$localisation: 18px;

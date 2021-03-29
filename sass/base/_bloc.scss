@@ -1,0 +1,28 @@
+body {
+	max-width: $tiny;
+	margin: auto;
+	padding: auto;
+}
+.logo {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.contain-search{
+	background: linear-gradient(#999,1px,$search);
+	width: 100%;
+	.search {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.position{
+		font-family: 'Roboto-Regular';
+		font-size: $localisation;
+		margin-right: 30px;
+	}
+	i {
+		font-size: $localisation+2px;
+		margin-right: 30px;
+	}
+}
