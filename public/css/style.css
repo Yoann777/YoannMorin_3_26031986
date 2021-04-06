@@ -86,7 +86,8 @@ body {
       transition: opacity 750ms; }
 
 .fonctionnement {
-  padding-top: 30px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
   .fonctionnement h3 {
     margin-left: 20px;
     font-size: 25px; }
@@ -101,7 +102,7 @@ body {
     position: relative;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 1s; }
+    transition: all 750ms; }
     .fonctionnement .rules .number {
       height: 25px;
       width: 25px;
@@ -129,6 +130,67 @@ body {
       background: #e4d5f6; }
       .fonctionnement .rules:hover i {
         color: #9356dc;
-        transition: color 750ms; }
+        transition: color 500ms; }
+
+.resto {
+  margin: 0 auto;
+  padding-top: 30px;
+  background: #f4f4f4;
+  padding-bottom: 30px; }
+  .resto h3 {
+    margin-left: 20px;
+    font-size: 25px; }
+  .resto .choix {
+    display: block;
+    margin: 0 auto 30px;
+    background-color: #fff;
+    max-width: 450px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+    .resto .choix img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 170px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px; }
+    .resto .choix .indication {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 20px; }
+      .resto .choix .indication .titre {
+        line-height: 10px; }
+        .resto .choix .indication .titre em {
+          font-weight: bold;
+          font-style: normal; }
+      .resto .choix .indication .heart {
+        color: #000;
+        position: relative;
+        z-index: 100;
+        font-size: 25px;
+        transition: all 500ms; }
+        .resto .choix .indication .heart:hover {
+          color: #ff79da; }
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #282828; }
+  footer ul .title {
+    font-weight: 900;
+    font-family: 'Shrikhand-Regular';
+    color: #fff; }
+  footer ul li {
+    margin-top: 10px;
+    list-style-type: none; }
+    footer ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 500ms; }
+      footer ul li a:hover {
+        color: #99e2d0; }
 
 /*# sourceMappingURL=style.css.map */
