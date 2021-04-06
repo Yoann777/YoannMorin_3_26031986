@@ -173,10 +173,39 @@ body {
 					position: relative;
 					z-index: 100;
 					font-size: 25px;
-					transition: all 500ms;
-					&:hover {
-							color: $clr-sec;
+					
+					.fas 
+					{
+						opacity: 0;
+						position: relative;
+						cursor: pointer;
+						z-index: 1;
+						transition: all 500ms;
+						&:hover {
+							position: relative;
+							opacity: 1;
+							background: -webkit-linear-gradient($clr-prim, $clr-sec);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
 					}
+					.far {
+						opacity: 1;
+						z-index: -1;
+						position: absolute;
+						left: 0;
+						top: 0;
+						bottom: 0;
+						right: 0;
+						transition: all 500ms;
+						&:hover {
+							opacity: 0;
+						}
+					}
+					
+
+					
+					
 					
 				
 			}
