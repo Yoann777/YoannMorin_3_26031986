@@ -5,12 +5,16 @@ body {
 	font-family: 'Roboto-Regular';
 }
 
+
+
 // Logo du site
 .logo {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
+
+
 
 // Localisation
 .contain-search{
@@ -30,6 +34,8 @@ body {
 		margin-right: 30px;
 	}
 }
+
+
 
 //Description
 .description {
@@ -92,14 +98,15 @@ body {
 	}
 }
 
+
+// Fonctionnement du site
 .fonctionnement {
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 30px; 
 	h3 {
 		margin-left: 20px;
 		font-size: 25px;
 	}
-
 	.rules {
 		@include rules;
 		.number {
@@ -113,7 +120,6 @@ body {
 		}
 		.rules-txt {
 			@include rules-txt;
-
 		}
 		transition: all 750ms;
 		&:hover {
@@ -124,7 +130,6 @@ body {
 			}
 		}
 	}
-	
 }
 
 // Restaurants
@@ -133,6 +138,11 @@ body {
 	padding-top: 30px;
 	background: $clr-fond;
 	padding-bottom: 30px;
+	a {
+		text-decoration: none;
+		color: #000;
+
+	}
 	h3 {
 		margin-left: 20px;
 		font-size: 25px;
@@ -145,6 +155,10 @@ body {
 		width: 90%;
 		border-radius: 20px;
 		box-shadow: 0 0 10px rgba(0,0,0,0.3);
+		transition: all 500ms;
+		&:hover {
+			background: lighten($clr-ter, 20%);
+		}
 		img {
 			object-fit: cover;
 			object-position: center;
@@ -161,8 +175,9 @@ body {
 			margin: 0 20px;
 			.titre {
 				line-height: 10px;
+				font-family: 'Roboto-Light';
 				em {
-					font-weight: bold;
+					font-family: 'Roboto-Bold';
 					font-style: normal;
 				}
 			}
@@ -179,35 +194,21 @@ body {
 						opacity: 0;
 						position: relative;
 						cursor: pointer;
-						z-index: 1;
 						transition: all 500ms;
 						&:hover {
-							position: relative;
+							transform: scale(1.15);
 							opacity: 1;
 							background: -webkit-linear-gradient($clr-prim, $clr-sec);
 							-webkit-background-clip: text;
 							-webkit-text-fill-color: transparent;
+							border: unset;
+							font-weight: 900;
 						}
 					}
 					.far {
 						opacity: 1;
-						z-index: -1;
 						position: absolute;
-						left: 0;
-						top: 0;
-						bottom: 0;
-						right: 0;
-						transition: all 500ms;
-						&:hover {
-							opacity: 0;
 						}
-					}
-					
-
-					
-					
-					
-				
 			}
 		}
 	}
