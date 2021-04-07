@@ -8,10 +8,25 @@ body {
 
 
 // Logo du site
+.logo-lien {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+.retour {
+		i {
+		color: #000;
+		font-size: 25px;
+		position: relative;
+		margin-left: -60px;
+	}
+}
 .logo {
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 10px;
+text-align: center;
+padding-top: 20px;
+padding-bottom: 10px;
 }
 
 
@@ -156,9 +171,7 @@ body {
 		border-radius: 20px;
 		box-shadow: 0 0 10px rgba(0,0,0,0.3);
 		transition: all 500ms;
-		&:hover {
-			background: lighten($clr-ter, 20%);
-		}
+		
 		img {
 			object-fit: cover;
 			object-position: center;
@@ -166,6 +179,26 @@ body {
 			height: 170px;
 			border-top-left-radius: 20px;
 			border-top-right-radius: 20px;
+		}
+		.nouveau {
+			position: absolute;
+			right: 30px;
+			margin-top: 15px;
+			background: $clr-ter;
+			padding: 8px 15px;
+			color: darken($clr-ter,40%);
+			border-radius: 5px;
+		}
+		.clignote {
+			animation-duration: 2s;
+			animation-name: clignotement;
+			animation-iteration-count: infinite;
+			transition: none;
+		}
+		@keyframes clignotement {
+			0% { opacity: 1; }
+			50% { opacity: 0; }
+			100% { opacity: 1; }
 		}
 		.indication {
 			display: flex;
@@ -196,7 +229,7 @@ body {
 						cursor: pointer;
 						transition: all 500ms;
 						&:hover {
-							transform: scale(1.15);
+							transform: scale(1.1);
 							opacity: 1;
 							background: -webkit-linear-gradient($clr-prim, $clr-sec);
 							-webkit-background-clip: text;
@@ -223,7 +256,7 @@ footer {
 	
 	ul {
 		.title {
-			font-weight: 900;
+			font-size: 20px;
 			font-family: 'Shrikhand-Regular';
 			color: #fff;
 		}
@@ -232,6 +265,7 @@ footer {
 			list-style-type: none;
 			a {
 				text-decoration: none;
+				font-size: 18px;
 				color: #fff;
 				transition: color 500ms;
 				&:hover {
@@ -241,4 +275,16 @@ footer {
 		}
 	}
 
+}
+
+
+// page annexes
+.present {
+	width: 100%;
+	img {			
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+			height: 270px;
+	}
 }
