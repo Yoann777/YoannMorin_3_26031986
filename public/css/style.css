@@ -137,6 +137,9 @@ body {
   padding-top: 30px;
   background: #f4f4f4;
   padding-bottom: 30px; }
+  .resto a {
+    text-decoration: none;
+    color: #000; }
   .resto h3 {
     margin-left: 20px;
     font-size: 25px; }
@@ -147,7 +150,10 @@ body {
     max-width: 450px;
     width: 90%;
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 500ms; }
+    .resto .choix:hover {
+      background: #e8f9f5; }
     .resto .choix img {
       object-fit: cover;
       object-position: center;
@@ -162,9 +168,10 @@ body {
       align-items: center;
       margin: 0 20px; }
       .resto .choix .indication .titre {
-        line-height: 10px; }
+        line-height: 10px;
+        font-family: 'Roboto-Light'; }
         .resto .choix .indication .titre em {
-          font-weight: bold;
+          font-family: 'Roboto-Bold';
           font-style: normal; }
       .resto .choix .indication .heart {
         color: #000;
@@ -175,25 +182,18 @@ body {
           opacity: 0;
           position: relative;
           cursor: pointer;
-          z-index: 1;
           transition: all 500ms; }
           .resto .choix .indication .heart .fas:hover {
-            position: relative;
+            transform: scale(1.15);
             opacity: 1;
             background: -webkit-linear-gradient(#9356dc, #ff79da);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent; }
+            -webkit-text-fill-color: transparent;
+            border: unset;
+            font-weight: 900; }
         .resto .choix .indication .heart .far {
           opacity: 1;
-          z-index: -1;
-          position: absolute;
-          left: 0;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          transition: all 500ms; }
-          .resto .choix .indication .heart .far:hover {
-            opacity: 0; }
+          position: absolute; }
 
 footer {
   padding-top: 20px;
