@@ -202,7 +202,7 @@ body {
         line-height: 10px;
         font-family: 'Roboto-Light'; }
         .resto .choix .indication .titre em {
-          font-family: 'Roboto-Bold';
+          font-weight: bold;
           font-style: normal; }
       .resto .choix .indication .heart {
         color: #000;
