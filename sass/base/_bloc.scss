@@ -12,11 +12,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-
 }
 .retour {
-		i {
+	i {
 		color: #000;
 		font-size: 25px;
 		position: relative;
@@ -24,12 +22,10 @@ body {
 	}
 }
 .logo {
-text-align: center;
-padding-top: 20px;
-padding-bottom: 10px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
-
-
 
 // Localisation
 .contain-search{
@@ -49,8 +45,6 @@ padding-bottom: 10px;
 		margin-right: 30px;
 	}
 }
-
-
 
 //Description
 .description {
@@ -92,10 +86,10 @@ padding-bottom: 10px;
 		position: relative;
 		z-index: 1;
 			&:hover {
-			&::after {
-				opacity: 1;
+				&::after {
+					opacity: 1;
+				}
 			}
-		}
 		&::after {
 			content: "";
 			position: absolute;
@@ -156,7 +150,6 @@ padding-bottom: 10px;
 	a {
 		text-decoration: none;
 		color: #000;
-
 	}
 	h3 {
 		margin-left: 20px;
@@ -173,35 +166,35 @@ padding-bottom: 10px;
 		transition: all 500ms;
 		.image {
 			display: block;
-		img {
-			object-fit: cover;
-			object-position: center;
-			width: 100%;
-			height: 170px;
-			border-top-left-radius: 20px;
-			border-top-right-radius: 20px;
+			img {
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				height: 170px;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+			}
+			.nouveau {
+				position: absolute;
+				margin-top: 15px;
+				margin-left: 230px;
+				background: $clr-ter;
+				padding: 8px 15px;
+				color: darken($clr-ter,40%);
+				border-radius: 5px;
+			}
+			.clignote {
+				animation-duration: 1500ms;
+				animation-name: clignotement;
+				animation-iteration-count: infinite;
+				transition: none;
+			}
+			@keyframes clignotement {
+				from { opacity: 1.0; }
+   				50% { opacity: 0; }
+    			to { opacity: 1.0; }
+			}
 		}
-		.nouveau {
-			position: absolute;
-			margin-top: 15px;
-			margin-left: 230px;
-			background: $clr-ter;
-			padding: 8px 15px;
-			color: darken($clr-ter,40%);
-			border-radius: 5px;
-		}
-		.clignote {
-			animation-duration: 2s;
-			animation-name: clignotement;
-			animation-iteration-count: infinite;
-			transition: none;
-		}
-		@keyframes clignotement {
-			0% { opacity: 1; }
-			50% { opacity: 0; }
-			100% { opacity: 1; }
-		}
-	}
 		.indication {
 			display: flex;
 			flex-direction: row;
@@ -216,34 +209,25 @@ padding-bottom: 10px;
 					font-style: normal;
 				}
 			}
-
-
 			.heart {
-					color: #000;
-					position: relative;
-					z-index: 100;
-					font-size: 25px;
-					
-					.fas 
-					{
-						opacity: 0;
-						position: relative;
-						cursor: pointer;
-						transition: all 500ms;
-						&:hover {
-							transform: scale(1.1);
-							opacity: 1;
-							background: -webkit-linear-gradient($clr-prim, $clr-sec);
-							-webkit-background-clip: text;
-							-webkit-text-fill-color: transparent;
-							border: unset;
-							font-weight: 900;
-						}
+				position: relative;
+				z-index: 100;
+				font-size: 25px;
+				i {
+					&::before {
+						font-family: 'Font Awesome 5 Free';
+						content: '\f004';
+						color: black;
+						font-style: normal;
 					}
-					.far {
-						opacity: 1;
-						position: absolute;
-						}
+					&:hover {
+						transition: all 500ms;
+						font-weight: 900;
+						background: -webkit-linear-gradient($clr-prim, $clr-sec);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+				}	
 			}
 		}
 	}
@@ -255,7 +239,6 @@ footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background: rgba(40,40,40,1);
-	
 	ul {
 		.title {
 			font-size: 20px;
@@ -276,7 +259,6 @@ footer {
 			}
 		}
 	}
-
 }
 
 
@@ -287,6 +269,6 @@ footer {
 		object-fit: cover;
 		object-position: center;
 		width: 100%;
-			height: 270px;
+		height: 270px;
 	}
 }
