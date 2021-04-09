@@ -31,3 +31,33 @@
 	margin-left: 60px;
 	position: absolute;
 }
+@mixin coeur-corazon {
+	color: black;
+	font-style: normal;
+	transition: all 500ms;
+	&:hover {
+		animation-name: corazon;
+		animation-duration: 500ms;
+		animation-fill-mode: forwards;
+
+		@keyframes corazon {
+			0% {
+				color: #000;
+				font-weight: 400;
+			}
+			30% {
+				transform: scale(0.8);
+			}
+			50% {
+				transform: scale(1.2);
+			}
+			100% {
+				background: -webkit-linear-gradient($clr-prim, $clr-sec);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transform: scale(1);
+				font-weight: 900;
+			}
+		}
+	}
+}
