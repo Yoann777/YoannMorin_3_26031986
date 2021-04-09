@@ -176,10 +176,11 @@ body {
 			}
 			.nouveau {
 				position: absolute;
-				margin-top: 15px;
-				margin-left: 230px;
+				right: 8%;
+				margin-top: 10px;
+				font-size: 15px;
 				background: $clr-ter;
-				padding: 8px 15px;
+				padding: 7px 14px;
 				color: darken($clr-ter,40%);
 				border-radius: 5px;
 			}
@@ -210,24 +211,10 @@ body {
 				}
 			}
 			.heart {
-				position: relative;
-				z-index: 100;
 				font-size: 25px;
-				i {
-					&::before {
-						font-family: 'Font Awesome 5 Free';
-						content: '\f004';
-						color: black;
-						font-style: normal;
-					}
-					&:hover {
-						transition: all 500ms;
-						font-weight: 900;
-						background: -webkit-linear-gradient($clr-prim, $clr-sec);
-						-webkit-background-clip: text;
-						-webkit-text-fill-color: transparent;
-					}
-				}	
+				.coeur {
+					@include coeur-corazon;
+				}
 			}
 		}
 	}
