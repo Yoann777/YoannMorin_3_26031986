@@ -13,7 +13,8 @@
 body {
   max-width: 480px;
   margin: auto;
-  font-family: 'Roboto-Regular'; }
+  font-family: 'Roboto-Regular';
+  min-width: 350px; }
 
 .logo-lien {
   display: flex;
@@ -71,6 +72,7 @@ body {
     border: unset;
     margin: 10px auto 50px;
     width: 50%;
+    max-width: 280px;
     box-shadow: 0 0 10px #666;
     text-align: center;
     color: #fff;
@@ -236,12 +238,149 @@ footer {
       footer ul li a:hover {
         color: #99e2d0; }
 
-.present {
+.page-resto .present {
   width: 100%; }
-  .present img {
+  .page-resto .present img {
     object-fit: cover;
     object-position: center;
     width: 100%;
     height: 270px; }
+.page-resto .menu-resto {
+  background-color: #f4f4f4;
+  padding: 20px 0 20px 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -40px;
+  position: relative; }
+  .page-resto .menu-resto .repas {
+    padding-top: 20px; }
+    .page-resto .menu-resto .repas .fadein {
+      transform: scaleY(0);
+      transform-origin: top;
+      animation-name: fondu;
+      animation-duration: 2s;
+      animation-fill-mode: forwards; }
+@keyframes fondu {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: scaleY(1); } }
+    .page-resto .menu-resto .repas__oeuvre {
+      color: #666;
+      font-size: 20px;
+      margin: 0 5%;
+      width: 90px; }
+      .page-resto .menu-resto .repas__oeuvre .brd {
+        border: 2px solid #99e2d0;
+        width: 45px; }
+  .page-resto .menu-resto .btn {
+    background-image: linear-gradient(0deg, #9356dc, #ff79da);
+    border: unset;
+    margin: 10px auto 50px;
+    width: 50%;
+    max-width: 280px;
+    box-shadow: 0 0 10px #666;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    padding: 17px 20px 17px 20px;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    width: 30%; }
+    .page-resto .menu-resto .btn:hover::after {
+      opacity: 1; }
+    .page-resto .menu-resto .btn::after {
+      content: "";
+      position: absolute;
+      border-radius: 40px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px #5f5f5f;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 750ms; }
+  .page-resto .menu-resto .title {
+    font-family: 'Shrikhand-Regular';
+    font-size: 14px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .page-resto .menu-resto .title .far {
+      font-size: 25px; }
+      .page-resto .menu-resto .title .far:hover {
+        color: black;
+        font-style: normal;
+        transition: all 500ms; }
+        .page-resto .menu-resto .title .far:hover:hover {
+          background: -webkit-linear-gradient(#9356dc, #ff79da);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 900; }
+  .page-resto .menu-resto h3 {
+    font-size: 17px;
+    font-weight: bold; }
+  .page-resto .menu-resto h4 {
+    font-family: 'Roboto-Light';
+    font-size: 14px;
+    color: #666; }
+  .page-resto .menu-resto .item {
+    width: 90%;
+    margin: 15px auto 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    height: 75px;
+    position: relative; }
+    .page-resto .menu-resto .item:hover .item__nom {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 190px;
+      display: inline-block;
+      overflow: hidden; }
+    .page-resto .menu-resto .item:hover .item__prix {
+      padding: 0 20px; }
+    .page-resto .menu-resto .item:hover .item__icon {
+      transform: scaleX(1);
+      transition: transform 200ms;
+      transform-origin: right; }
+      .page-resto .menu-resto .item:hover .item__icon--rot {
+        transform: rotate(2turn);
+        transition: transform 750ms; }
+    .page-resto .menu-resto .item__nom {
+      padding-left: 10px;
+      line-height: 5px;
+      width: 320px;
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .page-resto .menu-resto .item__prix {
+      padding: 10px;
+      width: 60px;
+      text-align: center; }
+    .page-resto .menu-resto .item__icon {
+      background-color: #99e2d0;
+      color: white;
+      height: 75px;
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      position: absolute;
+      right: 0;
+      font-size: 25px;
+      transform: scaleX(0); }
 
 /*# sourceMappingURL=style.css.map */
