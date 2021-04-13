@@ -1,3 +1,6 @@
+/* Mettre en anglais les class et autre */
+
+
 // Mise en page du corps du site
 body {
 	max-width: $tiny;
@@ -19,11 +22,11 @@ body {
 		height: 100%;
 		transform-origin: left;
 		transform: scaleX(0);
-		animation-name: chargement;
+		animation-name: loading;
 		animation-duration: 3s;
 		animation-delay: 500ms;
 		animation-fill-mode: backwards;
-		@keyframes chargement {
+		@keyframes loading {
 			0% {
 				opacity: 1;
 				background-color: $clr-prim;
@@ -65,12 +68,12 @@ body {
 		}
 	}
 // Logo du site
-	.logo-lien {
+	.logo-link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
-	.retour {
+	.back {
 		i {
 			color: #000;
 			font-size: 25px;
@@ -127,7 +130,7 @@ body {
 			display: flex;
 		}
 		.btn{
-			@include bouton;
+			@include button;
 		}
 	}
 // Fonctionnement du site
@@ -176,7 +179,7 @@ body {
 			margin-left: 20px;
 			font-size: 25px;
 		}
-		.choix {
+		.choice {
 			display: block;
 			margin: 0 auto 30px;
 			background-color: #fff;
@@ -185,7 +188,7 @@ body {
 			border-radius: 20px;
 			box-shadow: 0 0 10px rgba(0,0,0,0.3);
 			transition: all 500ms;
-			.image {
+			.pics {
 				display: block;
 				img {
 					object-fit: cover;
@@ -195,7 +198,7 @@ body {
 					border-top-left-radius: 20px;
 					border-top-right-radius: 20px;
 				}
-				.nouveau {
+				.new {
 					position: absolute;
 					right: 8%;
 					margin-top: 10px;
@@ -205,13 +208,13 @@ body {
 					color: darken($clr-ter,40%);
 					border-radius: 5px;
 				}
-				.clignote {
+				.label {
 					animation-duration: 1500ms;
-					animation-name: clignotement;
+					animation-name: blinking;
 					animation-iteration-count: infinite;
 					transition: none;
 				}
-				@keyframes clignotement {
+				@keyframes blinking {
 					from { opacity: 1.0; }
 	   				50% { opacity: 0; }
 	    			to { opacity: 1.0; }
@@ -235,7 +238,7 @@ body {
 					font-size: 25px;
 					&:hover {
 						.coeur {
-							@include coeur-corazon;
+							@include heart;
 						}
 					}
 				}
@@ -288,16 +291,16 @@ body {
 			border-top-right-radius: 30px;
 			margin-top: -40px;
 			position: relative;
-			.repas {
+			.meal {
 				padding-top: 20px;
 				.fadein {
 					transform: scaleY(0);
 					transform-origin: top;
-					animation-name: fondu;
+					animation-name: fade;
 					animation-duration: 2s;
 					animation-delay: 4.3s;
 					animation-fill-mode: forwards;
-					@keyframes fondu {
+					@keyframes fade {
 						0% {
 							opacity: 0;
 						}
@@ -319,7 +322,7 @@ body {
 				}
 			}
 			.btn {
-				@include bouton;
+				@include button;
 				margin-top: 60px;
 				width: 30%;
 			}
@@ -333,20 +336,12 @@ body {
 				.far {
 					font-size: 25px;
 					&:hover {
-						@include coeur-corazon;
+						@include heart;
 					}
 				}
 			}
-			/*h3 {
-				font-size: 17px;
-				font-weight: bold;
-			}
-			h4 {
-				font-family: 'Roboto-Light';
-				font-size: 14px;
-				color: $clr-txt-sec;
-			}*/
-			.item {
+			
+			.item { /* -> créer mixin de l'accueil fonctionnement */
 				width: 90%;
 				margin: 15px auto 0;
 				background-color: #fff;
@@ -358,24 +353,24 @@ body {
 				position: relative;
 				&:hover {
 					.item {
-						&__nom {
+						&__text {
 							width: 190px;
 							display: flex;
 							flex-direction: column;
 							justify-content: space-around;
-							&--1 {
+							&--title {
 								font-size: 17px;
 								font-weight: bold;
-								@include hide-txt;
+								//@include hide-txt;
 							}
-							&--2 {
+							&--desc {
 								font-family: 'Roboto-Light';
 								font-size: 14px;
 								color: $clr-txt-sec;
-								@include hide-txt;
+								//@include hide-txt;
 							}
 						}
-						&__prix {
+						&__price {
 							padding: 10px;
 							transform: translateX(-10px);
 							transition: transform 200ms;
@@ -391,26 +386,27 @@ body {
 						}
 					}
 				}
-				&__nom {
+				&__text {
 					padding-left: 15px;
 					line-height: 25px;
 					width: 250px;
 					display: flex;
 					flex-direction: column;
 					justify-content: space-around;
-					&--1 {
+					&--title {
 						font-size: 17px;
 						font-weight: bold;
 						@include hide-txt;
+						/* letter-spacing: ;*/
 					}
-					&--2 {
+					&--desc {
 						font-family: 'Roboto-Light';
 						font-size: 14px;
 						color: $clr-txt-sec;
 						@include hide-txt;
 					}
 				}
-				&__prix {
+				&__price {
 					padding: 15px;
 					width: 60px;
 					text-align: right;
