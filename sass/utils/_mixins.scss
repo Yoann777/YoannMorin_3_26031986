@@ -31,7 +31,7 @@
 	margin-left: 60px;
 	position: absolute;
 }
-@mixin coeur-corazon {
+@mixin heart {
 	color: black;
 	font-style: normal;
 	transition: all 500ms;
@@ -42,7 +42,7 @@
 		font-weight: 900;
 	}
 }
-@mixin bouton {
+@mixin button {
 	background-image: $clr-btn;
 	border: unset;
 	margin: 10px auto 50px;
