@@ -248,11 +248,11 @@ body {
             font-style: normal; }
         .container .resto .choix .indication .heart {
           font-size: 25px; }
-          .container .resto .choix .indication .heart .coeur {
+          .container .resto .choix .indication .heart:hover .coeur {
             color: black;
             font-style: normal;
             transition: all 500ms; }
-            .container .resto .choix .indication .heart .coeur:hover {
+            .container .resto .choix .indication .heart:hover .coeur:hover {
               background: -webkit-linear-gradient(#9356dc, #ff79da);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -271,6 +271,7 @@ body {
       .container footer ul li a {
         text-decoration: none;
         font-size: 18px;
+        font-family: 'Roboto-Light';
         color: #fff;
         transition: color 500ms; }
         .container footer ul li a:hover {
@@ -288,7 +289,16 @@ body {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     margin-top: -40px;
-    position: relative; }
+    position: relative;
+    /*h3 {
+    	font-size: 17px;
+    	font-weight: bold;
+    }
+    h4 {
+    	font-family: 'Roboto-Light';
+    	font-size: 14px;
+    	color: $clr-txt-sec;
+    }*/ }
     .container .page-resto .menu-resto .repas {
       padding-top: 20px; }
       .container .page-resto .menu-resto .repas .fadein {
@@ -296,7 +306,7 @@ body {
         transform-origin: top;
         animation-name: fondu;
         animation-duration: 2s;
-        animation-delay: 4s;
+        animation-delay: 4.3s;
         animation-fill-mode: forwards; }
 @keyframes fondu {
   0% {
@@ -362,13 +372,6 @@ body {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900; }
-    .container .page-resto .menu-resto h3 {
-      font-size: 17px;
-      font-weight: bold; }
-    .container .page-resto .menu-resto h4 {
-      font-family: 'Roboto-Light';
-      font-size: 14px;
-      color: #666; }
     .container .page-resto .menu-resto .item {
       width: 90%;
       margin: 15px auto 0;
@@ -380,13 +383,27 @@ body {
       height: 75px;
       position: relative; }
       .container .page-resto .menu-resto .item:hover .item__nom {
-        white-space: nowrap;
-        text-overflow: ellipsis;
         width: 190px;
-        display: inline-block;
-        overflow: hidden; }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .container .page-resto .menu-resto .item:hover .item__nom--1 {
+          font-size: 17px;
+          font-weight: bold;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .container .page-resto .menu-resto .item:hover .item__nom--2 {
+          font-family: 'Roboto-Light';
+          font-size: 14px;
+          color: #666;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
       .container .page-resto .menu-resto .item:hover .item__prix {
-        padding: 0 20px; }
+        padding: 10px;
+        transform: translateX(-10px);
+        transition: transform 200ms; }
       .container .page-resto .menu-resto .item:hover .item__icon {
         transform: scaleX(1);
         transition: transform 200ms;
@@ -395,17 +412,31 @@ body {
           transform: rotate(2turn);
           transition: transform 750ms; }
       .container .page-resto .menu-resto .item__nom {
-        padding-left: 10px;
-        line-height: 5px;
-        width: 320px;
-        display: block;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden; }
+        padding-left: 15px;
+        line-height: 25px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .container .page-resto .menu-resto .item__nom--1 {
+          font-size: 17px;
+          font-weight: bold;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+        .container .page-resto .menu-resto .item__nom--2 {
+          font-family: 'Roboto-Light';
+          font-size: 14px;
+          color: #666;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
       .container .page-resto .menu-resto .item__prix {
-        padding: 10px;
+        padding: 15px;
         width: 60px;
-        text-align: center; }
+        text-align: right;
+        font-size: 17px;
+        font-weight: bold; }
       .container .page-resto .menu-resto .item__icon {
         background-color: #99e2d0;
         color: white;
