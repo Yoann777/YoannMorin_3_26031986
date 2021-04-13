@@ -397,7 +397,7 @@ body {
 						font-size: 17px;
 						font-weight: bold;
 						@include hide-txt;
-						/* letter-spacing: ;*/
+						letter-spacing: -1px;
 					}
 					&--desc {
 						font-family: 'Roboto-Light';
