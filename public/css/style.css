@@ -412,7 +412,7 @@ body {
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-          /* letter-spacing: ;*/ }
+          letter-spacing: -1px; }
         .container .page-resto .menu-resto .item__text--desc {
           font-family: 'Roboto-Light';
           font-size: 14px;
