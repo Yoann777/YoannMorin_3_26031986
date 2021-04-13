@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Shrikhand-Regular';
   src: url("../../Shrikhand/Shrikhand-Regular.ttf"); }
@@ -10,6 +11,7 @@
 @font-face {
   font-family: 'Roboto-Bold';
   src: url("../../Roboto/Roboto-bold.ttf"); }
+/* Mettre en anglais les class et autre */
 body {
   max-width: 480px;
   margin: auto;
@@ -29,11 +31,11 @@ body {
     height: 100%;
     transform-origin: left;
     transform: scaleX(0);
-    animation-name: chargement;
+    animation-name: loading;
     animation-duration: 3s;
     animation-delay: 500ms;
     animation-fill-mode: backwards; }
-@keyframes chargement {
+@keyframes loading {
   0% {
     opacity: 1;
     background-color: #9356dc;
@@ -61,11 +63,11 @@ body {
     opacity: 0.1; }
   100% {
     opacity: 1; } }
-  .container .logo-lien {
+  .container .logo-link {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .container .retour i {
+  .container .back i {
     color: #000;
     font-size: 25px;
     position: relative;
@@ -195,7 +197,7 @@ body {
     .container .resto h3 {
       margin-left: 20px;
       font-size: 25px; }
-    .container .resto .choix {
+    .container .resto .choice {
       display: block;
       margin: 0 auto 30px;
       background-color: #fff;
@@ -204,16 +206,16 @@ body {
       border-radius: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       transition: all 500ms; }
-      .container .resto .choix .image {
+      .container .resto .choice .pics {
         display: block; }
-        .container .resto .choix .image img {
+        .container .resto .choice .pics img {
           object-fit: cover;
           object-position: center;
           width: 100%;
           height: 170px;
           border-top-left-radius: 20px;
           border-top-right-radius: 20px; }
-        .container .resto .choix .image .nouveau {
+        .container .resto .choice .pics .new {
           position: absolute;
           right: 8%;
           margin-top: 10px;
@@ -222,37 +224,37 @@ body {
           padding: 7px 14px;
           color: #278870;
           border-radius: 5px; }
-        .container .resto .choix .image .clignote {
+        .container .resto .choice .pics .label {
           animation-duration: 1500ms;
-          animation-name: clignotement;
+          animation-name: blinking;
           animation-iteration-count: infinite;
           transition: none; }
-@keyframes clignotement {
+@keyframes blinking {
   from {
     opacity: 1.0; }
   50% {
     opacity: 0; }
   to {
     opacity: 1.0; } }
-      .container .resto .choix .indication {
+      .container .resto .choice .indication {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         margin: 0 20px; }
-        .container .resto .choix .indication .titre {
+        .container .resto .choice .indication .titre {
           line-height: 10px;
           font-family: 'Roboto-Light'; }
-          .container .resto .choix .indication .titre em {
+          .container .resto .choice .indication .titre em {
             font-weight: bold;
             font-style: normal; }
-        .container .resto .choix .indication .heart {
+        .container .resto .choice .indication .heart {
           font-size: 25px; }
-          .container .resto .choix .indication .heart:hover .coeur {
+          .container .resto .choice .indication .heart:hover .coeur {
             color: black;
             font-style: normal;
             transition: all 500ms; }
-            .container .resto .choix .indication .heart:hover .coeur:hover {
+            .container .resto .choice .indication .heart:hover .coeur:hover {
               background: -webkit-linear-gradient(#9356dc, #ff79da);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -289,37 +291,28 @@ body {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     margin-top: -40px;
-    position: relative;
-    /*h3 {
-    	font-size: 17px;
-    	font-weight: bold;
-    }
-    h4 {
-    	font-family: 'Roboto-Light';
-    	font-size: 14px;
-    	color: $clr-txt-sec;
-    }*/ }
-    .container .page-resto .menu-resto .repas {
+    position: relative; }
+    .container .page-resto .menu-resto .meal {
       padding-top: 20px; }
-      .container .page-resto .menu-resto .repas .fadein {
+      .container .page-resto .menu-resto .meal .fadein {
         transform: scaleY(0);
         transform-origin: top;
-        animation-name: fondu;
+        animation-name: fade;
         animation-duration: 2s;
         animation-delay: 4.3s;
         animation-fill-mode: forwards; }
-@keyframes fondu {
+@keyframes fade {
   0% {
     opacity: 0; }
   100% {
     opacity: 1;
     transform: scaleY(1); } }
-      .container .page-resto .menu-resto .repas__oeuvre {
+      .container .page-resto .menu-resto .meal__oeuvre {
         color: #666;
         font-size: 20px;
         margin: 0 5%;
         width: 90px; }
-        .container .page-resto .menu-resto .repas__oeuvre .brd {
+        .container .page-resto .menu-resto .meal__oeuvre .brd {
           border: 2px solid #99e2d0;
           width: 45px; }
     .container .page-resto .menu-resto .btn {
@@ -373,6 +366,7 @@ body {
             -webkit-text-fill-color: transparent;
             font-weight: 900; }
     .container .page-resto .menu-resto .item {
+      /* -> créer mixin de l'accueil fonctionnement */
       width: 90%;
       margin: 15px auto 0;
       background-color: #fff;
@@ -382,25 +376,19 @@ body {
       border-radius: 20px;
       height: 75px;
       position: relative; }
-      .container .page-resto .menu-resto .item:hover .item__nom {
+      .container .page-resto .menu-resto .item:hover .item__text {
         width: 190px;
         display: flex;
         flex-direction: column;
         justify-content: space-around; }
-        .container .page-resto .menu-resto .item:hover .item__nom--1 {
+        .container .page-resto .menu-resto .item:hover .item__text--title {
           font-size: 17px;
-          font-weight: bold;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis; }
-        .container .page-resto .menu-resto .item:hover .item__nom--2 {
+          font-weight: bold; }
+        .container .page-resto .menu-resto .item:hover .item__text--desc {
           font-family: 'Roboto-Light';
           font-size: 14px;
-          color: #666;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis; }
-      .container .page-resto .menu-resto .item:hover .item__prix {
+          color: #666; }
+      .container .page-resto .menu-resto .item:hover .item__price {
         padding: 10px;
         transform: translateX(-10px);
         transition: transform 200ms; }
@@ -411,27 +399,28 @@ body {
         .container .page-resto .menu-resto .item:hover .item__icon--rot {
           transform: rotate(2turn);
           transition: transform 750ms; }
-      .container .page-resto .menu-resto .item__nom {
+      .container .page-resto .menu-resto .item__text {
         padding-left: 15px;
         line-height: 25px;
         width: 250px;
         display: flex;
         flex-direction: column;
         justify-content: space-around; }
-        .container .page-resto .menu-resto .item__nom--1 {
+        .container .page-resto .menu-resto .item__text--title {
           font-size: 17px;
           font-weight: bold;
           overflow: hidden;
           white-space: nowrap;
-          text-overflow: ellipsis; }
-        .container .page-resto .menu-resto .item__nom--2 {
+          text-overflow: ellipsis;
+          /* letter-spacing: ;*/ }
+        .container .page-resto .menu-resto .item__text--desc {
           font-family: 'Roboto-Light';
           font-size: 14px;
           color: #666;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis; }
-      .container .page-resto .menu-resto .item__prix {
+      .container .page-resto .menu-resto .item__price {
         padding: 15px;
         width: 60px;
         text-align: right;
