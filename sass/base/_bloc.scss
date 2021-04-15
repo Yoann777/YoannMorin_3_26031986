@@ -3,7 +3,7 @@
 
 // Mise en page du corps du site
 body {
-	max-width: $tiny;
+	//max-width: $tiny;
 	margin: auto;
 	font-family: 'Roboto-Regular';
 	min-width: 350px;
@@ -190,6 +190,7 @@ body {
 			transition: all 500ms;
 			.pics {
 				display: block;
+				position: relative;
 				img {
 					object-fit: cover;
 					object-position: center;
@@ -200,7 +201,7 @@ body {
 				}
 				.new {
 					position: absolute;
-					right: 8%;
+					right: 15px;
 					margin-top: 10px;
 					font-size: 15px;
 					background: $clr-ter;
