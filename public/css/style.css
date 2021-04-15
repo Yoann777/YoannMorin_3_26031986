@@ -13,7 +13,6 @@
   src: url("../../Roboto/Roboto-bold.ttf"); }
 /* Mettre en anglais les class et autre */
 body {
-  max-width: 480px;
   margin: auto;
   font-family: 'Roboto-Regular';
   min-width: 350px; }
@@ -207,7 +206,8 @@ body {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       transition: all 500ms; }
       .container .resto .choice .pics {
-        display: block; }
+        display: block;
+        position: relative; }
         .container .resto .choice .pics img {
           object-fit: cover;
           object-position: center;
@@ -217,7 +217,7 @@ body {
           border-top-right-radius: 20px; }
         .container .resto .choice .pics .new {
           position: absolute;
-          right: 8%;
+          right: 15px;
           margin-top: 10px;
           font-size: 15px;
           background: #99e2d0;
