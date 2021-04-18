@@ -1,6 +1,3 @@
-/* Mettre en anglais les class et autre */
-
-
 // Mise en page du corps du site
 body {
 	//max-width: $tiny;
@@ -137,137 +134,219 @@ body {
 	.fonctionnement {
 		padding-top: 30px;
 		padding-bottom: 30px; 
+		@media (min-width: $small + 1) and (max-width: $large) {
+			max-width: 500px;
+			margin: auto;
+		}
+		@media (min-width: $large + 1) and (max-width: $xlarge) {
+			max-width: 1000px;
+			margin: auto;
+		}
+		@media (min-width: $xlarge + 1) {
+			max-width: 1300px;
+			margin: auto;
+		}
 		h3 {
 			margin-left: 20px;
 			font-size: 25px;
 		}
 		.rules {
-			@include rules;
-			.number {
-				@include number;
+			@media (min-width: $large + 1) {
+				display: flex;
+				justify-content: space-around;
 			}
-			i {
-				position: absolute;
-				margin-left: 30px;
-				font-size: 18px;
-				color: #666;
-			}
-			.rules-txt {
-				@include rules-txt;
-			}
-			transition: all 750ms;
-			&:hover {
-				background: lighten($clr-prim, 30%);
+			&__check {
+				@include rules;
+				.number {
+					@include number;
+				}
 				i {
-					color: $clr-prim;
-					transition: color 500ms;
+					position: absolute;
+					margin-left: 30px;
+					font-size: 18px;
+					color: #666;
+				}
+				.rules-txt {
+					@include rules-txt;
+				}
+				transition: all 750ms;
+				&:hover {
+					background: lighten($clr-prim, 30%);
+					i {
+						color: $clr-prim;
+						transition: color 500ms;
+					}
 				}
 			}
 		}
 	}
 // Restaurants
-	.resto {
+	.container-resto {
 		margin: 0 auto;
 		padding-top: 30px;
 		background: $clr-fond;
 		padding-bottom: 30px;
-		a {
-			text-decoration: none;
-			color: #000;
-		}
-		h3 {
-			margin-left: 20px;
-			font-size: 25px;
-		}
-		.choice {
-			display: block;
-			margin: 0 auto 30px;
-			background-color: #fff;
-			max-width: 450px;
-			width: 90%;
-			border-radius: 20px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-			transition: all 500ms;
-			.pics {
-				display: block;
-				position: relative;
-				img {
-					object-fit: cover;
-					object-position: center;
-					width: 100%;
-					height: 170px;
-					border-top-left-radius: 20px;
-					border-top-right-radius: 20px;
-				}
-				.new {
-					position: absolute;
-					right: 15px;
-					margin-top: 10px;
-					font-size: 15px;
-					background: $clr-ter;
-					padding: 7px 14px;
-					color: darken($clr-ter,40%);
-					border-radius: 5px;
-				}
-				.label {
-					animation-duration: 1500ms;
-					animation-name: blinking;
-					animation-iteration-count: infinite;
-					transition: none;
-				}
-				@keyframes blinking {
-					from { opacity: 1.0; }
-	   				50% { opacity: 0; }
-	    			to { opacity: 1.0; }
-				}
+		.resto {
+			@media (min-width: $small + 1) and (max-width: $large) {
+				max-width: 500px;
+				margin: auto;
 			}
-			.indication {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
-				margin: 0 20px;
-				.titre {
-					line-height: 10px;
-					font-family: 'Roboto-Light';
-					em {
-						font-weight: bold;
-						font-style: normal;
-					}
+			@media (min-width: $large + 1) and (max-width: $xlarge) {
+				max-width: 1000px;
+				margin: auto;
+			}
+			@media (min-width: $xlarge + 1) {
+				max-width: 1300px;
+				margin: auto;
+			}
+			h3 {
+				margin-left: 20px;
+				font-size: 25px;
+			}
+			.container-choice {
+				@media (min-width: $large + 1) and (max-width: $xlarge) {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					justify-content: space-around;
+					margin: auto;
+					max-width: 1000px;
 				}
-				.heart {
-					font-size: 25px;
-					&:hover {
-						.coeur {
-							@include heart;
+				@media (min-width: $xlarge) {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					justify-content: space-around;
+					margin: auto;
+					max-width: 1000px;
+				}
+				a {
+					text-decoration: none;
+					color: #000;
+				}
+				.choice {
+					display: block;
+					margin: 0 auto 30px;
+					background-color: #fff;
+					max-width: 450px;
+					width: 90%;
+					border-radius: 20px;
+					box-shadow: 0 0 10px rgba(0,0,0,0.3);
+					transition: all 500ms;
+					@media (min-width: $large + 1) and (max-width: $xlarge) {
+						width: 350px;
+					}
+					@media (min-width: $xlarge) {
+						width: 450px;
+					}
+					.pics {
+						display: block;
+						position: relative;
+						img {
+							object-fit: cover;
+							object-position: center;
+							width: 100%;
+							height: 170px;
+							border-top-left-radius: 20px;
+							border-top-right-radius: 20px;
+						}
+						.new {
+							position: absolute;
+							right: 15px;
+							margin-top: 10px;
+							font-size: 15px;
+							background: $clr-ter;
+							padding: 7px 14px;
+							color: darken($clr-ter,40%);
+							border-radius: 5px;
+						}
+						.label {
+							animation-duration: 1500ms;
+							animation-name: blinking;
+							animation-iteration-count: infinite;
+							transition: none;
+						}
+						@keyframes blinking {
+							from { opacity: 1.0; }
+		   					50% { opacity: 0; }
+		    				to { opacity: 1.0; }
+						}
+					}
+					.indication {
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: center;
+						margin: 0 20px;
+						.titre {
+							line-height: 10px;
+							font-family: 'Roboto-Light';
+							em {
+								font-weight: bold;
+								font-style: normal;
+							}
+						}
+						.heart {
+							font-size: 25px;
+							&:hover {
+								.coeur {
+									@include heart;
+								}
+							}
 						}
 					}
 				}
 			}
 		}
-	}
+	}	
 //footer
 	footer {
 		padding-top: 20px;
 		padding-bottom: 20px;
 		background: rgba(40,40,40,1);
-		ul {
-			.title {
+		.container-footer {
+			width: 90%;
+			margin: auto;
+			@media (min-width: $small + 1) and (max-width: $medium) {
+				max-width: 500px;
+				margin: auto;
+			}
+			@media (min-width: $large + 1) and (max-width: $xlarge) {
+				max-width: 1000px;
+				margin: auto;
+			}
+			@media (min-width: $xlarge) {
+				max-width: 1300px;
+				margin: auto;
+			}
+			.title-footer {
 				font-size: 20px;
 				font-family: 'Shrikhand-Regular';
 				color: #fff;
+				@media (min-width: $medium + 1) {
+					display: flex;
+					justify-content: center;
+					font-size: 30px;
+				}
 			}
-			li {
-				margin-top: 10px;
-				list-style-type: none;
-				a {
-					text-decoration: none;
-					font-size: 18px;
-					font-family: 'Roboto-Light';
-					color: #fff;
-					transition: color 500ms;
-					&:hover {
-						color: $clr-ter;
+			ul {
+				@media (min-width: $medium + 1) {
+					display: flex;
+					justify-content: space-around;
+				}
+				padding: 0;
+				li {
+					margin-top: 10px;
+					list-style-type: none;
+					a {
+						text-decoration: none;
+						font-size: 18px;
+						font-family: 'Roboto-Light';
+						color: #fff;
+						transition: color 500ms;
+						&:hover {
+							color: $clr-ter;
+						}
 					}
 				}
 			}
