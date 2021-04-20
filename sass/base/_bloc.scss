@@ -467,7 +467,7 @@ body {
 						@media (min-width: $xlarge + 1) {
 							box-shadow: 0 0 10px $clr-sec;
 							transform: scale(1.1);
-							transition: all 500ms;
+							transition: all 200ms;
 						}
 						.item {
 							&__text {
