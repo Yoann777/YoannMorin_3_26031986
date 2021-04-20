@@ -355,6 +355,10 @@ body {
 
 // page annexes
 	.page-resto {
+		@media (min-width: $medium + 1) {
+			max-width: 1200px;
+			margin: auto;
+		}
 		.present {
 			width: 100%;
 			img {			
@@ -362,6 +366,13 @@ body {
 				object-position: center;
 				width: 100%;
 				height: 270px;
+				@media (min-width: $medium + 1) {
+					max-width: 1200px;
+					height: 350px;
+					margin: auto;
+					display: flex;
+					justify-content: center;
+				}
 			}	
 		}
 		.menu-resto {
@@ -371,142 +382,168 @@ body {
 			border-top-right-radius: 30px;
 			margin-top: -40px;
 			position: relative;
-			.meal {
-				padding-top: 20px;
-				.fadein {
-					transform: scaleY(0);
-					transform-origin: top;
-					animation-name: fade;
-					animation-duration: 2s;
-					animation-delay: 4.3s;
-					animation-fill-mode: forwards;
-					@keyframes fade {
-						0% {
-							opacity: 0;
-						}
-						100% {
-							opacity: 1;
-							transform: scaleY(1);
-						}
-					}
+			.container-menu {
+				@media (min-width: $tiny + 1) and (max-width: $medium) {
+					max-width: 500px;
+					margin: auto;
 				}
-				&__oeuvre {
-					color: $clr-txt-sec;
-					font-size: 20px;
-					margin: 0 5%;
-					width: 90px;
-					.brd {
-						border: 2px solid $clr-ter;
-						width: 45px;
+				.container-meal {
+					@media (min-width: $medium + 1) {
+						width: 750px;
+						@include grid-m;
 					}
-				}
-			}
-			.btn {
-				@include button;
-				margin-top: 60px;
-				width: 30%;
-			}
-			.title {
-				font-family: 'Shrikhand-Regular';
-				font-size: 14px;
-				padding: 0 15px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				.far {
-					font-size: 25px;
-					&:hover {
-						@include heart;
+					@media (min-width: $xlarge + 1) {
+						width: 1200px;
+						@include grid-xl;
 					}
-				}
-			}
-			
-			.item { /* -> créer mixin de l'accueil fonctionnement */
-				width: 90%;
-				margin: 15px auto 0;
-				background-color: #fff;
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				border-radius: 20px;
-				height: 75px;
-				position: relative;
-				&:hover {
-					.item {
-						&__text {
-							width: 190px;
-							display: flex;
-							flex-direction: column;
-							justify-content: space-around;
-							&--title {
-								font-size: 17px;
-								font-weight: bold;
-								//@include hide-txt;
-							}
-							&--desc {
-								font-family: 'Roboto-Light';
-								font-size: 14px;
-								color: $clr-txt-sec;
-								//@include hide-txt;
+					.meal {
+						padding-top: 20px;
+						.fadein {
+							transform: scaleY(0);
+							transform-origin: top;
+							animation-name: fade;
+							animation-duration: 2s;
+							animation-delay: 4.3s;
+							animation-fill-mode: forwards;
+							@keyframes fade {
+								0% {
+									opacity: 0;
+								}
+								100% {
+									opacity: 1;
+									transform: scaleY(1);
+								}
 							}
 						}
-						&__price {
-							padding: 10px;
-							transform: translateX(-10px);
-							transition: transform 200ms;
-						}
-						&__icon {
-							transform: scaleX(1);
-							transition: transform 200ms;
-							transform-origin: right;
-							&--rot {
-								transform: rotate(2turn);
-								transition: transform 750ms;
+						&__oeuvre {
+							color: $clr-txt-sec;
+							font-size: 20px;
+							margin: 0 5%;
+							width: 90px;
+							.brd {
+								border: 2px solid $clr-ter;
+								width: 45px;
 							}
 						}
 					}
 				}
-				&__text {
-					padding-left: 15px;
-					line-height: 25px;
-					width: 250px;
+				.btn {						
+					@include button;
+					margin-top: 60px;
+					width: 30%;
+				}
+				.title {
+					font-family: 'Shrikhand-Regular';
+					font-size: 14px;
+					padding: 0 15px;
 					display: flex;
-					flex-direction: column;
-					justify-content: space-around;
-					&--title {
+					justify-content: space-between;
+					align-items: center;
+					@media (min-width: $medium + 1) {
+						width: 500px;
+						margin: auto;
+					}
+					.far {
+						font-size: 25px;
+						&:hover {
+							@include heart;
+						}
+					}
+				}
+				
+				.item { /* -> créer mixin de l'accueil fonctionnement */
+					width: 335px;
+					margin: 15px auto 0;
+					background-color: #fff;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					border-radius: 20px;
+					height: 75px;
+					position: relative;
+					transform: scale(1);
+					&:hover {
+						@media (min-width: $xlarge + 1) {
+							box-shadow: 0 0 10px $clr-sec;
+							transform: scale(1.1);
+							transition: all 500ms;
+						}
+						.item {
+							&__text {
+								width: 190px;
+								display: flex;
+								flex-direction: column;
+								justify-content: space-around;
+								&--title {
+									font-size: 17px;
+									font-weight: bold;
+									//@include hide-txt;
+								}
+								&--desc {
+									font-family: 'Roboto-Light';
+									font-size: 14px;
+									color: $clr-txt-sec;
+									//@include hide-txt;
+								}
+							}
+							&__price {
+								padding: 10px;
+								transform: translateX(-10px);
+								transition: transform 200ms;
+							}
+							&__icon {
+								transform: scaleX(1);
+								transition: transform 200ms;
+								transform-origin: right;
+								&--rot {
+									transform: rotate(2turn);
+									transition: transform 750ms;
+								}
+							}
+						}
+					}
+					&__text {
+						padding-left: 15px;
+						line-height: 25px;
+						width: 250px;
+						display: flex;
+						flex-direction: column;
+						justify-content: space-around;
+						&--title {
+							font-size: 17px;
+							font-weight: bold;
+							@include hide-txt;
+							letter-spacing: -1px;
+						}
+						&--desc {
+							font-family: 'Roboto-Light';
+							font-size: 14px;
+							color: $clr-txt-sec;
+							@include hide-txt;
+						}
+					}
+					&__price {
+						padding: 15px;
+						width: 60px;
+						text-align: right;
 						font-size: 17px;
 						font-weight: bold;
-						@include hide-txt;
-						letter-spacing: -1px;
 					}
-					&--desc {
-						font-family: 'Roboto-Light';
-						font-size: 14px;
-						color: $clr-txt-sec;
-						@include hide-txt;
+					&__icon {
+						background-color: $clr-ter;
+						color: white;
+						height: 75px;
+						width: 60px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-top-right-radius: 20px;
+						border-bottom-right-radius: 20px;
+						position: absolute;
+						right: 0;
+						font-size: 25px;
+						transform: scaleX(0);
 					}
-				}
-				&__price {
-					padding: 15px;
-					width: 60px;
-					text-align: right;
-					font-size: 17px;
-					font-weight: bold;
-				}
-				&__icon {
-					background-color: $clr-ter;
-					color: white;
-					height: 75px;
-					width: 60px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					border-top-right-radius: 20px;
-					border-bottom-right-radius: 20px;
-					position: absolute;
-					right: 0;
-					font-size: 25px;
-					transform: scaleX(0);
 				}
 			}
 		}
