@@ -415,7 +415,7 @@ body {
           grid-column: 3/4;
           grid-row: 1/2; } }
     .container .page-resto .menu-resto .container-menu .container-meal .meal {
-      padding-top: 20px; }
+      margin: 40px 0; }
       .container .page-resto .menu-resto .container-menu .container-meal .meal .fadein {
         transform: scaleY(0);
         transform-origin: top;
@@ -494,7 +494,7 @@ body {
     .container .page-resto .menu-resto .container-menu .item {
       /* -> créer mixin de l'accueil fonctionnement */
       width: 335px;
-      margin: 15px auto 0;
+      margin: 15px auto 0px;
       background-color: #fff;
       display: flex;
       flex-direction: row;
