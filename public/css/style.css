@@ -507,7 +507,7 @@ body {
         .container .page-resto .menu-resto .container-menu .item:hover {
           box-shadow: 0 0 10px #ff79da;
           transform: scale(1.1);
-          transition: all 500ms; } }
+          transition: all 200ms; } }
       .container .page-resto .menu-resto .container-menu .item:hover .item__text {
         width: 190px;
         display: flex;
