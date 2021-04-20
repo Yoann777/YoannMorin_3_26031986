@@ -397,7 +397,8 @@ body {
 						@include grid-xl;
 					}
 					.meal {
-						padding-top: 20px;
+						// padding-top: 20px;
+						margin: 40px 0;
 						.fadein {
 							transform: scaleY(0);
 							transform-origin: top;
@@ -453,7 +454,7 @@ body {
 				
 				.item { /* -> créer mixin de l'accueil fonctionnement */
 					width: 335px;
-					margin: 15px auto 0;
+					margin: 15px auto 0px;
 					background-color: #fff;
 					display: flex;
 					flex-direction: row;
