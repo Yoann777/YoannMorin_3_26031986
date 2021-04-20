@@ -387,8 +387,8 @@ body {
         width: 750px;
         margin: auto;
         display: grid;
-        grid-template-column: repeat(5, 1fr);
-        grid-template-row: repeat(3, 1fr); }
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr); }
         .container .page-resto .menu-resto .container-menu .container-meal .meal-one {
           grid-column: 1/3;
           grid-row: 1/2; }
@@ -403,8 +403,8 @@ body {
         width: 1200px;
         margin: auto;
         display: grid;
-        grid-template-column: repeat(3, 1fr);
-        grid-template-row: repeat(1, 1fr); }
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr); }
         .container .page-resto .menu-resto .container-menu .container-meal .meal-one {
           grid-column: 1/2;
           grid-row: 1/2; }
