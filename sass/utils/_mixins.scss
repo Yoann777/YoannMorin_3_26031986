@@ -32,7 +32,6 @@
 	position: absolute;
 }
 @mixin like-icon {
-	color: black;
 	font-style: normal;
 	transition: all 500ms;
 	&:hover {
@@ -42,6 +41,7 @@
 		font-weight: 900;
 	}
 }
+// Mixin pour les boutons du site (commandez et explorez)
 @mixin button {
 	background-image: $clr-btn;
 	border: unset;
@@ -77,11 +77,14 @@
 		transition: opacity 750ms;
 	}
 }
+// text overflow dans les menus à confectionner
 @mixin txt-overflow {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+// mixin pour le css grid
 @mixin grid-xl {
 	margin: auto;
 	display: grid;
@@ -116,5 +119,27 @@
 	.meal-three {
 		grid-column: 3/5;
 		grid-row: 3/4;
+	}
+}
+
+// Mixin pour les tailles d'écran
+@mixin small-medium {
+	@media (min-width: $small + 1) and (max-width: $medium) {
+		max-width: 500px;
+	}
+}
+@mixin small-large {
+	@media (min-width: $small + 1) and (max-width: $large) {
+		max-width: 500px;
+	}
+}
+@mixin large-xlarge {
+	@media (min-width: $large + 1) and (max-width: $xlarge) {
+		max-width: 1000px;
+	}
+}
+@mixin xlarge {
+	@media (min-width: $xlarge) {
+		max-width: 1300px;
 	}
 }
