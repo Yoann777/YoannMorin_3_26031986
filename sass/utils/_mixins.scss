@@ -1,7 +1,7 @@
 // mixin pour les boutons de la partie fonctionnement
-@mixin rules{
+@mixin steps{
 	width: 290px;
-	background-color: $clr-fond;
+	background-color: $clr-bg-light-grey;
 	margin: 25px auto;
 	padding: 25px 0;
 	display: flex;
@@ -11,7 +11,7 @@
 	border-radius: 15px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-@mixin number {
+@mixin steps-number {
 	height: 25px;
 	width: 25px;
 	margin-left: -12px;
@@ -22,7 +22,7 @@
 	background-color: $clr-prim;
 	color: #fff;
 }
-@mixin rules-txt {
+@mixin steps-txt {
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
@@ -31,7 +31,7 @@
 	margin-left: 60px;
 	position: absolute;
 }
-@mixin heart {
+@mixin like-icon {
 	color: black;
 	font-style: normal;
 	transition: all 500ms;
@@ -77,7 +77,7 @@
 		transition: opacity 750ms;
 	}
 }
-@mixin hide-txt {
+@mixin txt-overflow {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
