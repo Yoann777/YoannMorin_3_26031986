@@ -30,7 +30,7 @@ body {
     transform-origin: left;
     transform: scaleX(0);
     animation-name: loading;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-delay: 500ms;
     animation-fill-mode: backwards; }
 @keyframes loading {
@@ -53,7 +53,7 @@ body {
 .container {
   animation-name: item;
   animation-duration: 500ms;
-  animation-delay: 4s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
   opacity: 0.1; }
 @keyframes item {
