@@ -1,0 +1,197 @@
+// Partie localisation
+.container-search{
+	background: $clr-bg-grey;
+	width: 100%;
+	.search {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.position{
+		font-size: $loc-size;
+		margin-right: 30px;
+	}
+	i {
+		font-size: $loc-size+2px;
+		margin-right: 30px;
+	}
+}
+// Description
+.description {
+	background: $clr-bg-light-grey;
+	h1 {
+		width: 75%;
+		margin: auto;
+		text-align: center;
+		font-weight: bold;
+		font-size: 25px;
+		padding-top: 40px;
+	}
+	p {
+		text-align: center;
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 18px;
+		font-weight: 100;
+		font-family: 'Roboto-Light';
+		color: $clr-txt-sec;
+		letter-spacing: 1px;
+	}
+	a {
+		text-decoration: none;
+		display: flex;
+	}
+	.btn{
+		@include button;
+	}
+}
+// Fonctionnement du site
+.container-steps {
+	padding-top: 30px;
+	padding-bottom: 30px; 
+	margin: auto;
+	@media (min-width: $small + 1) and (max-width: $large) {
+		max-width: 500px;
+	}
+	@media (min-width: $large + 1) and (max-width: $xlarge) {
+		max-width: 1000px;
+	}
+	@media (min-width: $xlarge + 1) {
+		max-width: 1300px;
+	}
+	h3 {
+		margin-left: 20px;
+		font-size: 25px;
+	}
+	.steps {
+		@media (min-width: $large + 1) {
+			display: flex;
+			justify-content: space-around;
+		}
+		&__check {
+			@include steps;
+			.steps-number {
+				@include steps-number;
+			}
+			i {
+				position: absolute;
+				margin-left: 30px;
+				font-size: 18px;
+				color: #666;
+			}
+			.steps-txt {
+				@include steps-txt;
+			}
+			transition: all 750ms;
+			&:hover {
+				background: lighten($clr-prim, 30%);
+				i {
+					color: $clr-prim;
+					transition: color 500ms;
+				}
+			}
+		}
+	}
+}
+// Restaurants
+.container-resto {
+	padding-top: 30px;
+	background: $clr-bg-light-grey;
+	padding-bottom: 30px;
+	.resto {
+		margin: auto;
+		@include small-large;
+		@include large-xlarge;
+		@include xlarge;
+		h3 {
+			margin-left: 20px;
+			font-size: 25px;
+		}
+		.container-choice {
+			@media (min-width: $large + 1) {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				justify-content: space-around;
+				margin: auto;
+				max-width: 1000px;
+			}
+			a {
+				text-decoration: none;
+				color: #000;
+			}
+			.choice {
+				display: block;
+				margin: 0 auto 30px;
+				background-color: #fff;
+				max-width: 450px;
+				width: 90%;
+				border-radius: 20px;
+				box-shadow: 0 0 10px rgba(0,0,0,0.3);
+				transition: all 500ms;
+				@media (min-width: $large + 1) and (max-width: $xlarge) {
+					width: 350px;
+				}
+				@media (min-width: $xlarge) {
+					width: 450px;
+				}
+				.pics {
+					display: block;
+					position: relative;
+					img {
+						object-fit: cover;
+						object-position: center;
+						width: 100%;
+						height: 170px;
+						border-top-left-radius: 20px;
+						border-top-right-radius: 20px;
+					}
+					.new {
+						position: absolute;
+						right: 15px;
+						margin-top: 10px;
+						font-size: 15px;
+						background: $clr-ter;
+						padding: 7px 14px;
+						color: darken($clr-ter,40%);
+						border-radius: 5px;
+					}
+					.label {
+						animation-duration: 1500ms;
+						animation-name: blinking;
+						animation-iteration-count: infinite;
+						transition: none;
+					}
+					@keyframes blinking {
+						from { opacity: 1.0; }
+	   					50% { opacity: 0; }
+	    				to { opacity: 1.0; }
+					}
+				}
+				.indication {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					margin: 0 20px;
+					.titre {
+						line-height: 10px;
+						font-family: 'Roboto-Light';
+						em {
+							font-weight: bold;
+							font-style: normal;
+						}
+					}
+					.heart {
+						font-size: 25px;
+						&:hover {
+							.like {
+								@include like-icon;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}	
