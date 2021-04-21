@@ -84,8 +84,8 @@ body {
 		padding-bottom: 10px;
 	}
 	// Localisation
-	.contain-search{
-		background: $search;
+	.container-search{
+		background: $clr-bg-grey;
 		width: 100%;
 		.search {
 			display: flex;
@@ -93,17 +93,17 @@ body {
 			align-items: center;
 		}
 		.position{
-			font-size: $localisation;
+			font-size: $loc-size;
 			margin-right: 30px;
 		}
 		i {
-			font-size: $localisation+2px;
+			font-size: $loc-size+2px;
 			margin-right: 30px;
 		}
 	}
 //Description
 	.description {
-		background: $clr-fond;
+		background: $clr-bg-light-grey;
 		h1 {
 			width: 75%;
 			margin: auto;
@@ -131,34 +131,32 @@ body {
 		}
 	}
 // Fonctionnement du site
-	.fonctionnement {
+	.container-steps {
 		padding-top: 30px;
 		padding-bottom: 30px; 
+		margin: auto;
 		@media (min-width: $small + 1) and (max-width: $large) {
 			max-width: 500px;
-			margin: auto;
 		}
 		@media (min-width: $large + 1) and (max-width: $xlarge) {
 			max-width: 1000px;
-			margin: auto;
 		}
 		@media (min-width: $xlarge + 1) {
 			max-width: 1300px;
-			margin: auto;
 		}
 		h3 {
 			margin-left: 20px;
 			font-size: 25px;
 		}
-		.rules {
+		.steps {
 			@media (min-width: $large + 1) {
 				display: flex;
 				justify-content: space-around;
 			}
 			&__check {
-				@include rules;
-				.number {
-					@include number;
+				@include steps;
+				.steps-number {
+					@include steps-number;
 				}
 				i {
 					position: absolute;
@@ -166,8 +164,8 @@ body {
 					font-size: 18px;
 					color: #666;
 				}
-				.rules-txt {
-					@include rules-txt;
+				.steps-txt {
+					@include steps-txt;
 				}
 				transition: all 750ms;
 				&:hover {
@@ -182,37 +180,26 @@ body {
 	}
 // Restaurants
 	.container-resto {
-		margin: 0 auto;
 		padding-top: 30px;
-		background: $clr-fond;
+		background: $clr-bg-light-grey;
 		padding-bottom: 30px;
 		.resto {
+			margin: auto;
 			@media (min-width: $small + 1) and (max-width: $large) {
 				max-width: 500px;
-				margin: auto;
 			}
 			@media (min-width: $large + 1) and (max-width: $xlarge) {
 				max-width: 1000px;
-				margin: auto;
 			}
 			@media (min-width: $xlarge + 1) {
 				max-width: 1300px;
-				margin: auto;
 			}
 			h3 {
 				margin-left: 20px;
 				font-size: 25px;
 			}
 			.container-choice {
-				@media (min-width: $large + 1) and (max-width: $xlarge) {
-					display: flex;
-					flex-wrap: wrap;
-					flex-direction: row;
-					justify-content: space-around;
-					margin: auto;
-					max-width: 1000px;
-				}
-				@media (min-width: $xlarge) {
+				@media (min-width: $large + 1) {
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
@@ -290,7 +277,7 @@ body {
 							font-size: 25px;
 							&:hover {
 								.coeur {
-									@include heart;
+									@include like-icon;
 								}
 							}
 						}
@@ -309,15 +296,12 @@ body {
 			margin: auto;
 			@media (min-width: $small + 1) and (max-width: $medium) {
 				max-width: 500px;
-				margin: auto;
 			}
 			@media (min-width: $large + 1) and (max-width: $xlarge) {
 				max-width: 1000px;
-				margin: auto;
 			}
 			@media (min-width: $xlarge) {
 				max-width: 1300px;
-				margin: auto;
 			}
 			.title-footer {
 				font-size: 20px;
@@ -376,7 +360,7 @@ body {
 			}	
 		}
 		.menu-resto {
-			background-color: $clr-fond;
+			background-color: $clr-bg-light-grey;
 			padding: 20px 0 20px 0;
 			border-top-left-radius: 30px;
 			border-top-right-radius: 30px;
@@ -447,7 +431,7 @@ body {
 					.far {
 						font-size: 25px;
 						&:hover {
-							@include heart;
+							@include like-icon;
 						}
 					}
 				}
@@ -465,7 +449,7 @@ body {
 					transform: scale(1);
 					&:hover {
 						@media (min-width: $xlarge + 1) {
-							box-shadow: 0 0 10px $clr-sec;
+							box-shadow: 0 0 10px $clr-ter;
 							transform: scale(1.1);
 							transition: all 200ms;
 						}
@@ -478,13 +462,11 @@ body {
 								&--title {
 									font-size: 17px;
 									font-weight: bold;
-									//@include hide-txt;
 								}
 								&--desc {
 									font-family: 'Roboto-Light';
 									font-size: 14px;
 									color: $clr-txt-sec;
-									//@include hide-txt;
 								}
 							}
 							&__price {
@@ -513,14 +495,14 @@ body {
 						&--title {
 							font-size: 17px;
 							font-weight: bold;
-							@include hide-txt;
+							@include txt-overflow;
 							letter-spacing: -1px;
 						}
 						&--desc {
 							font-family: 'Roboto-Light';
 							font-size: 14px;
 							color: $clr-txt-sec;
-							@include hide-txt;
+							@include txt-overflow;
 						}
 					}
 					&__price {
