@@ -33,13 +33,17 @@
 				margin: auto;
 			}
 			.container-meal {
-				@media (min-width: $medium + 1) {
+				@media (min-width: $medium + 1) and (max-width: $large) {
 					width: 750px;
-					@include grid-m;
+					@include tablet;
+				}
+				@media (min-width: $large + 1) and (max-width: $xlarge) {
+					width: 1000px;
+					@include grid;
 				}
 				@media (min-width: $xlarge + 1) {
 					width: 1200px;
-					@include grid-xl;
+					@include grid;
 				}
 				.meal {
 					// padding-top: 20px;
@@ -49,7 +53,7 @@
 						transform-origin: top;
 						animation-name: fade;
 						animation-duration: 2s;
-						animation-delay: 4.3s;
+						animation-delay: 3.5s;
 						animation-fill-mode: forwards;
 						@keyframes fade {
 							0% {
@@ -99,6 +103,12 @@
 			
 			.item { /* -> créer mixin de l'accueil fonctionnement */
 				width: 335px;
+				@media (min-width: $medium + 1) and (max-width: $large) {
+					width: 500px;
+				}
+				@media (min-width: $large + 1) and (max-width: $xlarge) {
+					width: 300px;
+				}
 				margin: 15px auto 0px;
 				background-color: #fff;
 				display: flex;
@@ -109,7 +119,7 @@
 				position: relative;
 				transform: scale(1);
 				&:hover {
-					@media (min-width: $xlarge + 1) {
+					@media (min-width: $large + 1) {
 						box-shadow: 0 0 10px $clr-ter;
 						transform: scale(1.1);
 						transition: all 200ms;
@@ -117,6 +127,12 @@
 					.item {
 						&__text {
 							width: 190px;
+							@media (min-width: $medium + 1) and (max-width: $large) {
+								width: 280px;
+							}
+							@media (min-width: $large + 1) and (max-width: $xlarge) {
+								width: 170px;
+							}
 							display: flex;
 							flex-direction: column;
 							justify-content: space-around;
@@ -132,6 +148,12 @@
 						}
 						&__price {
 							padding: 10px;
+							@media (min-width: $medium + 1) and (max-width: $large) {
+								padding-left: 50px;
+							}
+							@media (min-width: $large + 1) and (max-width: $xlarge) {
+								padding-left: 0px;
+							}
 							transform: translateX(-10px);
 							transition: transform 200ms;
 						}
@@ -150,6 +172,12 @@
 					padding-left: 15px;
 					line-height: 25px;
 					width: 250px;
+					@media (min-width: $medium + 1) and (max-width: $large) {
+						width: 370px;
+					}
+					@media (min-width: $large + 1) and (max-width: $xlarge) {
+						width: 220px;
+					}
 					display: flex;
 					flex-direction: column;
 					justify-content: space-around;
