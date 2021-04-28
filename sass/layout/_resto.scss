@@ -70,10 +70,12 @@
 						font-size: 20px;
 						margin: 0 5%;
 						width: 90px;
-						.brd {
-							border: 2px solid $clr-ter;
-							width: 45px;
-						}
+					}
+					hr {
+						margin: 0;
+						width: 45px;
+						border: 2px solid $clr-ter;
+						
 					}
 				}
 			}
@@ -101,7 +103,7 @@
 				}
 			}
 			
-			.item { /* -> créer mixin de l'accueil fonctionnement */
+			.item { 
 				width: 335px;
 				@media (min-width: $medium + 1) and (max-width: $large) {
 					width: 500px;
